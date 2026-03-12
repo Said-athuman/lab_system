@@ -1,0 +1,175 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body{
+    display:flex;
+    min-height:100vh;
+    background:#f4f7fa;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:240px;
+    background:#1e2a38;
+    color:white;
+    padding:20px 0;
+    position:fixed;
+    height:100%;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#00b894;
+}
+
+/* MAIN CONTENT */
+.main{
+    margin-left:240px;
+    width:100%;
+    padding:20px;
+}
+
+/* HEADER */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:40px;
+}
+
+.logo h1{
+    font-size:20px;
+    color:#2d3436;
+}
+
+/* DASHBOARD CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#636e72;
+}
+
+.card p{
+    font-size:22px;
+    font-weight:bold;
+    color:#00b894;
+}
+
+/* FORMS */
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    max-width:500px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    background:#00b894;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    background:#019875;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+th{
+    background:#1e2a38;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+/* PRINT FRIENDLY */
+@media print{
+    .sidebar,.topbar,button{
+        display:none;
+    }
+    body{
+        background:white;
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .sidebar{
+        width:200px;
+    }
+    .main{
+        margin-left:200px;
+    }
+}
